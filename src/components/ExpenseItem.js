@@ -2,13 +2,13 @@ import React from "react";
 
 import "./ExpenseItem.css";
 
-const ExpenseItem = () => {
+const ExpenseItem = (props) => {
   return (
     <div className="expense-item">
-      <div>08. 02. 2023</div>
+      <div>{props.date.toISOString}</div>
       <div className="expense-item__description">
-        <h2>Clothes</h2>
-        <div className="expense-item__price">£294.65</div>
+        <h2>{props.title}</h2>
+        <div className="expense-item__price">£{props.amount}</div>
       </div>
     </div>
   );
